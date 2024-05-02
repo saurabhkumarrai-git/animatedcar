@@ -5,7 +5,7 @@
 
 body{
     overflow: hidden;
-    animation: shakeBody linear 3s infinite;
+    /* animation: shakeBody linear 3s infinite; */
 }
 
 .sky{
@@ -33,6 +33,8 @@ body{
     background-image: url(track.png);
     top: 70vh;
     background-repeat: repeat-x;
+}
+.roadstart{
     animation: carMove linear 6s infinite;
 }
 
@@ -45,6 +47,9 @@ body{
     position: absolute;
     left: 27vw;
     bottom: 20vh;
+}
+
+.carstart{
     animation: shake linear 2s infinite;
 }
 
@@ -53,6 +58,8 @@ body{
     position: relative;
     top: 20vh;
     left: 4.5vw;
+}
+.wheel1start img{
     animation: wheelRotation linear 0.4s infinite;
 }
 
@@ -61,15 +68,42 @@ body{
     position: relative;
     top: 1vh;
     left: 29.2vw;
+}
+
+.wheel2start img{
     animation: wheelRotation linear 0.4s infinite;
+}
+
+/* Start button to start the Car */
+.start, .stop{
+    padding: 10px 20px;
+    background-color: green;
+    z-index: 10;
+    position: absolute;
+    bottom: 35%;
+    right: 13%;
+    border-radius: 50px;
+    border: none;
+    color: white;
+}
+
+.stop{
+    background-color: red;
+    bottom: 35%;
+    right: 8%;
+}
+button:hover{
+    scale: 0.98;
 }
 
 @keyframes wheelRotation
 {
-    100%{
-        transform: rotate(360deg);
+    from {
+        transform:rotate(0deg);
     }
-    
+    to {
+        transform:rotate(360deg);
+    }
 }
 
 @keyframes carMove 
